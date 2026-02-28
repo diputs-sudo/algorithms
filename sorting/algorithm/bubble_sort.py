@@ -14,10 +14,6 @@ Time Complexity:
 - Worst Case: O(n^2)
 - Average Case: O(n^2)
 - Best Case: O(n^2) (without optimization)
-
-This version includes:
-1. bubble_sort_verbose() -> shows each comparison and swap step-by-step.
-2. bubble_sort() -> a clean version without print statements.
 """
 
 
