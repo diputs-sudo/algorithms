@@ -1,0 +1,57 @@
+import { Graph } from "./visualizer/graph.js";
+import { Controller } from "./visualizer/controller.js";
+import { quickSort } from "./algorithms/quick.js";
+const graph = new Graph("graphContainer");
+let dataset = generateRandomArray(20);
+let generator = quickSort(dataset);
+let controller = new Controller(generator, graph);
+graph.render(dataset);
+const datasetInput = document.getElementById("datasetInput");
+const generateBtn = document.getElementById("generateBtn");
+const playBtn = document.getElementById("playBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+const stepBtn = document.getElementById("stepBtn");
+const resetBtn = document.getElementById("resetBtn");
+const speedRange = document.getElementById("speedRange");
+const learnMoreBtn = document.getElementById("learnMoreBtn");
+const detailsSection = document.getElementById("detailsSection");
+learnMoreBtn.addEventListener("click", () => {
+    detailsSection.scrollIntoView({ behavior: "smooth" });
+});
+generateBtn.addEventListener("click", () => {
+    dataset = generateRandomArray(20);
+    datasetInput.value = dataset.join(",");
+    reset();
+});
+datasetInput.addEventListener("change", () => {
+    const values = datasetInput.value
+        .split(",")
+        .map(v => Number(v.trim()))
+        .filter(v => !isNaN(v));
+    if (values.length > 0) {
+        dataset = values;
+        reset();
+    }
+});
+playBtn.addEventListener("click", () => {
+    controller.play();
+});
+pauseBtn.addEventListener("click", () => {
+    controller.pause();
+});
+stepBtn.addEventListener("click", () => {
+    controller.step();
+});
+resetBtn.addEventListener("click", () => {
+    reset();
+});
+speedRange.addEventListener("input", () => {
+    controller.setSpeed(Number(speedRange.value));
+});
+function reset() {
+    generator = quickSort(dataset);
+    controller.reset(generator, dataset);
+}
+function generateRandomArray(size) {
+    return Array.from({ length: size }, () => Math.floor(Math.random() * 100) + 1);
+}
