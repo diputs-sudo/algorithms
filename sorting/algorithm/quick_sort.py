@@ -23,7 +23,7 @@ Space Complexity:
 - O(n) in this implementation due to extra lists.
 
 Stability:
-- Not stable in general.
+- Not stable in general
 """
 
 
