@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sorting Algorithms</h1>
+        <p>Explore characteristics, complexity, and implementation details</p>
+
+        <div class="controls">
+            <div class="sort-container">
+                <label for="sortSelect">Sort by</label>
+                <div class="select-wrapper">
+                    <select id="sortSelect">
+                        <option value="name">Alphabetical</option>
+                        <option value="speed">Average Speed</option>
+                        <option value="memory">Memory Usage</option>
+                        <option value="difficulty">Difficulty</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="search algorithm..."/>
+        </div>
+    </header>
+
+    <main class="grid" id="algorithmGrid">
+
+        <a href="sorting/bitonic_sort.html" class="card" data-name="Bitonic Sort" data-speed="2" data-memory="2" data-difficulty="4">
+            <h2>Bitonic Sort</h2>
+            <p class="tags">
+                <span>O(n log² n)</span>
+                <span>Parallel Friendly</span>
+                <span>Memory: O(n)</span>
+                <span>Advanced</span>
+            </p>
+        </a>
+
+        <a href="sorting/bubble_sort.html" class="card" data-name="Bubble Sort" data-speed="4" data-memory="1" data-difficulty="1">
+            <h2>Bubble Sort</h2>
+            <p class="tags">
+                <span>Best: O(n)</span>
+                <span>Avg: O(n²)</span>
+                <span>Memory: O(1)</span>
+                <span>Stable</span>
+                <span>Classic</span>
+            </p>
+        </a>
+
+        <a href="sorting/bucket_sort.html" class="card" data-name="Bucket Sort" data-speed="2" data-memory="3" data-difficulty="3">
+            <h2>Bucket Sort</h2>
+            <p class="tags">
+                <span>O(n + k)</span>
+                <span>Distribution Sort</span>
+                <span>Memory: O(n)</span>
+                <span>Non Comparative</span>
+            </p>
+        </a>
+
+        <a href="sorting/counting_sort.html" class="card" data-name="Counting Sort" data-speed="1" data-memory="3" data-difficulty="2">
+            <h2>Counting Sort</h2>
+            <p class="tags">
+                <span>O(n + k)</span>
+                <span>Non Comparative</span>
+                <span>Stable</span>
+                <span>Memory: O(k)</span>
+            </p>
+        </a>
+
+        <a href="sorting/heap_sort.html" class="card" data-name="Heap Sort" data-speed="1" data-memory="1" data-difficulty="3">
+            <h2>Heap Sort</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Memory: O(1)</span>
+                <span>In Place</span>
+                <span>Binary Heap</span>
+            </p>
+        </a>
+
+        <a href="sorting/insertion_sort.html" class="card" data-name="Insertion Sort" data-speed="3" data-memory="1" data-difficulty="1">
+            <h2>Insertion Sort</h2>
+            <p class="tags">
+                <span>Best: O(n)</span>
+                <span>Avg: O(n²)</span>
+                <span>Memory: O(1)</span>
+                <span>Stable</span>
+            </p>
+        </a>
+
+        <a href="sorting/intro_sort.html" class="card" data-name="Intro Sort" data-speed="1" data-memory="2" data-difficulty="4">
+            <h2>Intro Sort</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Hybrid</span>
+                <span>Memory: O(log n)</span>
+                <span>Industry Standard</span>
+            </p>
+        </a>
+
+        <a href="sorting/merge_sort.html" class="card" data-name="Merge Sort" data-speed="1" data-memory="3" data-difficulty="2">
+            <h2>Merge Sort</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Memory: O(n)</span>
+                <span>Stable</span>
+                <span>Divide & Conquer</span>
+            </p>
+        </a>
+
+        <a href="sorting/merge_sort_inplace.html" class="card" data-name="Merge Sort In-Place" data-speed="1" data-memory="1" data-difficulty="5">
+            <h2>Merge Sort (In Place)</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Memory: O(1)</span>
+                <span>Advanced</span>
+            </p>
+        </a>
+
+        <a href="sorting/quick_sort.html" class="card" data-name="Quick Sort" data-speed="1" data-memory="2" data-difficulty="2">
+            <h2>Quick Sort</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Worst: O(n²)</span>
+                <span>Memory: O(log n)</span>
+                <span>Fast in Practice</span>
+            </p>
+        </a>
+
+        <a href="sorting/radix_sort.html" class="card" data-name="Radix Sort" data-speed="1" data-memory="3" data-difficulty="3">
+            <h2>Radix Sort</h2>
+            <p class="tags">
+                <span>O(nk)</span>
+                <span>Non Comparative</span>
+                <span>Memory: O(n + k)</span>
+            </p>
+        </a>
+
+        <a href="sorting/selection_sort.html" class="card" data-name="Selection Sort" data-speed="4" data-memory="1" data-difficulty="1">
+            <h2>Selection Sort</h2>
+            <p class="tags">
+                <span>O(n²)</span>
+                <span>Memory: O(1)</span>
+                <span>Classic</span>
+            </p>
+        </a>
+
+        <a href="sorting/shell_sort.html" class="card" data-name="Shell Sort" data-speed="2" data-memory="1" data-difficulty="3">
+            <h2>Shell Sort</h2>
+            <p class="tags">
+                <span>O(n log² n)</span>
+                <span>In Place</span>
+                <span>Gap Based</span>
+            </p>
+        </a>
+
+        <a href="sorting/tim_sort.html" class="card" data-name="Tim Sort" data-speed="1" data-memory="2" data-difficulty="3">
+            <h2>Tim Sort</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Hybrid</span>
+                <span>Stable</span>
+                <span>Python Default</span>
+            </p>
+        </a>
+
+        <a href="sorting/tournament_sort.html" class="card" data-name="Tournament Sort" data-speed="2" data-memory="3" data-difficulty="4">
+            <h2>Tournament Sort</h2>
+            <p class="tags">
+                <span>O(n log n)</span>
+                <span>Heap Based</span>
+                <span>Memory: O(n)</span>
+            </p>
+        </a>
+
+    </main>
+
+    <script type="module" src="../dist/sorting.js"></script>
+
+</body>
+</html>
