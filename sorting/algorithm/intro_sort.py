@@ -10,7 +10,7 @@ How it works:
 - For small subarrays, it uses Insertion Sort.
 - This combination guarantees both speed and worst case safety.
 
-The depth limit is typically set to 2 × log2(n).
+The depth limit is typically set to 2 x log2(n).
 If that depth is exceeded, Heap Sort is used to avoid
 Quick Sort worst case behavior.
 
