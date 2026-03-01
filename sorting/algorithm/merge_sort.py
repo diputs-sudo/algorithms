@@ -20,7 +20,7 @@ Space Complexity:
 - O(n) due to temporary arrays used during merging.
 
 Stability:
-- Stable because equal elements preserve their original order.
+- Stable because equal elements preserve their original order
 """
 
 
