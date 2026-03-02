@@ -44,7 +44,7 @@ function buildPath(language, category, algorithmName) {
     if (language === "java") {
         fileName = toPascalCase(algorithmName);
     }
-    return new URL(`../../${language}/${category}/algorithms/${fileName}.${extension}`, window.location.href).href;
+    return new URL(`../../${language}/${category}/algorithm/${fileName}.${extension}`, window.location.href).href;
 }
 function getExtension(language) {
     const extensions = {
