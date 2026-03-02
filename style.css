@@ -9,6 +9,14 @@ body {
   background: #0f1117;
   color: #e6edf3;
   min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
 }
 
 header {
@@ -167,6 +175,7 @@ header p {
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 .intro-section {
@@ -348,6 +357,8 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 30px 0 30px;
+    position: relative;
+    height: 60px;
 }
 
 .back-btn {
@@ -383,10 +394,12 @@ html {
 .github-btn {
     width: 45px;
     height: 45px;
+    top: 10px;
+    right: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: absolute;
     text-decoration: none;
 }
 
@@ -680,4 +693,35 @@ html {
 
 .code-variable {
     color: #9cdcfe;
+}
+
+.site-footer {
+  padding: 14px 10px;
+  background: #0d0f14;
+  border-top: 1px solid #1c1f26;
+  text-align: center;
+}
+
+.footer-content {
+  font-size: 0.75rem;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-content a {
+  color: #9cdcfe;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-content a:hover {
+  color: #4fc1ff;
+}
+
+.dot {
+  opacity: 0.9;
 }
