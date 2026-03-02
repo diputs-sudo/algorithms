@@ -56,12 +56,17 @@ function toPascalCase(name: string): string {
 
 function buildPath(language: string, category: string, algorithmName: string): string {
 
+    const extension = getExtension(language);
+    let fileName = algorithmName;
+
     if (language === "java") {
-        const className = toPascalCase(algorithmName);
-        return `/${language}/${category}/algorithm/${className}.java`;
+        fileName = toPascalCase(algorithmName);
     }
 
-    return `/${language}/${category}/algorithm/${algorithmName}.${getExtension(language)}`;
+    return new URL(
+        `../../${language}/${category}/algorithm/${fileName}.${extension}`,
+        window.location.href
+    ).href;
 }
 
 function getExtension(language: string): string {
