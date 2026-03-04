@@ -18,6 +18,7 @@ Time Complexity:
 
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 void print_array(const vector<int>& arr) {
@@ -29,26 +30,27 @@ void print_array(const vector<int>& arr) {
     cout << "]" << endl;
 }
 
-vector<int> bubble_sort_verbose(vector<int> arr) {
-    int n = arr.size();
+vector<int> bubble_sort_verbose(const vector<int>& arr) {
+    vector<int> a = arr;
+    int n = a.size();
     int step = 1;
 
     cout << "Start: ";
-    print_array(arr);
+    print_array(a);
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             cout << "Step " << step << ": compare "
-                 << arr[j] << " and " << arr[j+1] << endl;
+                 << a[j] << " and " << a[j + 1] << endl;
 
-            if (arr[j] > arr[j + 1]) {
-                cout << "  swap " << arr[j] << " and "
-                     << arr[j+1] << endl;
+            if (a[j] > a[j + 1]) {
+                cout << "  swap " << a[j] << " and "
+                     << a[j + 1] << endl;
 
-                swap(arr[j], arr[j + 1]);
+                swap(a[j], a[j + 1]);
 
                 cout << "  result: ";
-                print_array(arr);
+                print_array(a);
             } else {
                 cout << "  no swap" << endl;
             }
@@ -57,19 +59,20 @@ vector<int> bubble_sort_verbose(vector<int> arr) {
     }
 
     cout << "Sorted: ";
-    print_array(arr);
-    return arr;
+    print_array(a);
+    return a;
 }
 
-vector<int> bubble_sort(vector<int> arr) {
-    int n = arr.size();
+vector<int> bubble_sort(const vector<int>& arr) {
+    vector<int> a = arr;
+    int n = a.size();
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);
+            if (a[j] > a[j + 1]) {
+                swap(a[j], a[j + 1]);
             }
         }
     }
-    return arr;
+    return a;
 }
